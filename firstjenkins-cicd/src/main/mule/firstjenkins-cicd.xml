@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ad44a0e6-024b-4439-9a6e-943662a4cde7" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="firstjenkins-cicdFlow" doc:id="35313d82-db07-4333-8137-71d5c2f1d494" >
+		<http:listener doc:name="Listener" doc:id="b0365728-43b7-4cd1-bcb3-d3618b7b025b" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value='#["Welcome to Jenkins ci-cd application"]' doc:name="Set Payload" doc:id="43ef054b-ad1a-4b34-be02-b6a8c8f1524c" />
+	</flow>
+</mule>
