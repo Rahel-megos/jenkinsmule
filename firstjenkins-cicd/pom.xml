@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -23,7 +22,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.3.5</version>
+				<version>3.0.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -31,20 +30,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				 <cloudHubDeployment>
+				<cloudHubDeployment>
       <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>${app.runtime}</muleVersion>
-      <username>${username}</username>
-      <password>${password}</password>
-      <applicationName>${cloudhub.application.name}</applicationName>
-      <environment>${environment}</environment>
+      <muleVersion>4.3.0</muleVersion>
+      <username>Rahel-megos</username>
+      <password>Rackybini1901</password>
+      <applicationName>firstjenkins-cicd</applicationName>
+      <environment>sandbox</environment>
       <region>${region}</region>
-      <workers>${workers}</workers>
-      <workerType>${workerType}</workerType>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
       <properties>
         <key>value</key>
       </properties>
     </cloudHubDeployment>
+				 
 				</configuration>
 			</plugin>
 		</plugins>
